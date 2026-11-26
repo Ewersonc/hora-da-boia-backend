@@ -1,0 +1,13 @@
+spring:
+  flyway:
+    locations: classpath:db/migration
+
+app:
+  jwt:
+    secret: chave-de-teste-com-pelo-menos-32-bytes-de-tamanho
+    expiracao-minutos: 120
+  admin:
+    email: admin@teste.local
+    senha: senha-admin-teste
+  scheduler:
+    habilitado: false

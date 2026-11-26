@@ -1,0 +1,26 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  flyway:
+    locations: classpath:db/migration
+
+springdoc:
+  swagger-ui:
+    enabled: false
+  api-docs:
+    enabled: false
+
+app:
+  cors:
+    origens: ${CORS_ORIGENS}
+  jwt:
+    secret: ${JWT_SECRET}
+    expiracao-minutos: 120
+  admin:
+    email: ${ADMIN_EMAIL:}
+    senha: ${ADMIN_PASSWORD:}
